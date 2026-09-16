@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 #creat directory and create simlinks to data
 ACCESSION='Ishikawa'
