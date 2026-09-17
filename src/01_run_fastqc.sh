@@ -3,7 +3,7 @@
 #setting all necessary paths
 INPUT_DIR='/data/users/ankunzimana/genome_assembly_course/raw_data'
 OUTPUT_DIR='./read_QC/fastqc'
-FASTQC_SCRIPT='./src/fastqc.slurm.sh'
+FASTQC_SCRIPT='./src/slurm_scripts/fastqc.sh'
 
 rm -rf ./logs/err/* ./logs/out/*
 #creating output dir if it doesn't exist
