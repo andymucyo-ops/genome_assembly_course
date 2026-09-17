@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #setting all necessary paths
-WORKDIR='/data/users/ankunzimana/genome_assembly_course/raw_data'
+INPUT_DIR='/data/users/ankunzimana/genome_assembly_course/raw_data'
 OUTPUT_DIR='./read_QC/fastqc'
 FASTQC_SCRIPT='./src/fastqc.slurm.sh'
 
@@ -13,9 +13,9 @@ if [ ! -e ${OUTPUT_DIR} ]; then mkdir -p ${OUTPUT_DIR}; fi
 chmod u+x ${FASTQC_SCRIPT}
 
 #loop through fastq files from raw_data dir and run fastqc on each of them
-for dir in `ls -1 ${WORKDIR}`; do
-    for filename in `ls -1 "${WORKDIR}/${dir}"`; do 
-        file="${WORKDIR}/${dir}/${filename}"
+for dir in `ls -1 ${INPUT_DIR}`; do
+    for filename in `ls -1 "${INPUT_DIR}/${dir}"`; do 
+        file="${INPUT_DIR}/${dir}/${filename}"
         sbatch ${FASTQC_SCRIPT} ${file}
     done
 done

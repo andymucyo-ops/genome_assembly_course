@@ -11,12 +11,11 @@
 #SBATCH --error=/data/users/ankunzimana/genome_assembly_course/logs/err/error_fastqc_%j.e
 
 #setting up all necessary paths
-WORKDIR='/data/users/ankunzimana/genome_assembly_course/raw_data'
 OUTPUT_DIR='./read_QC/fastqc'
 CONTAINER='/containers/apptainer/fastqc-0.12.1.sif'
 
 #executes fastqc on each file passed to it
-apptainer exec\
+apptainer exec --bind /data \
     ${CONTAINER} fastqc ${1}\
     -o ${OUTPUT_DIR}\
     -t ${SLURM_CPUS_PER_TASK}

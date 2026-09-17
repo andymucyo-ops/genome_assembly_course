@@ -5,3 +5,4 @@ raw_data/
 logs/
 out/
 err/
+*.zip
