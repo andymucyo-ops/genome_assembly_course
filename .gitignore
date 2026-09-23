@@ -6,3 +6,4 @@ logs/
 out/
 err/
 *.zip
+*.gz
