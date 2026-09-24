@@ -1,9 +1,13 @@
 # MacOS cached files
 .DS_Store
 
+#directories to ignore
 raw_data/
+read_QC/
 logs/
 out/
 err/
+
+#filetypes to ignore
 *.zip
 *.gz

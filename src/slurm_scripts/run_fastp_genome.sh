@@ -12,8 +12,9 @@
 
 #setting up all necessary paths
 # output dir is the 2nd argument passed to by the script
+# trimmed files dire is the 3rd argument passed to by the script
 ACCESSION='Ishikawa'
-OUTFILE="${2}/${ACCESSION}.fq.gz"
+OUTFILE="${3}/${ACCESSION}.fq.gz"
 REPORT_HTML="${2}/fastp_${ACCESSION}.html"
 REPORT_JSON="${2}/fastp_${ACCESSION}.json"
 CONTAINER='/containers/apptainer/fastp_0.23.2--h5f740d0_3.sif'
