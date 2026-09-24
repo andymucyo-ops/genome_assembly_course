@@ -11,7 +11,7 @@
 #SBATCH --error=/data/users/ankunzimana/genome_assembly_course/logs/err/error_fastqc_%j.e
 
 #setting up all necessary paths
-OUTPUT_DIR='./read_QC/fastqc'
+OUTPUT_DIR="${2}"
 CONTAINER='/containers/apptainer/fastqc-0.12.1.sif'
 
 #executes fastqc on each file passed to it
