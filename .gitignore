@@ -4,6 +4,7 @@
 #directories to ignore
 raw_data/
 read_QC/
+assemblies/
 logs/
 out/
 err/
