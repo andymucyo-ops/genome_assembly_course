@@ -12,7 +12,7 @@
 
 #setting up all necessary paths
 ACCESSION='Ishikawa'
-OUTPUT_FILE="${2}${ACCESSION}.asm"
+OUTPUT_FILE="${2}${ACCESSION}"
 CONTAINER='/containers/apptainer/hifiasm_0.25.0.sif'
 
 #executes hifiasm on each file passed to it
@@ -23,4 +23,4 @@ apptainer exec --bind /data \
     ${1}
 
 #convert .gfa output to fasta format
-awk '/^S/{print ">"$2;print $3}' "${2}/*.gfa" > "${2}/${ACCESSION}.fa"
+awk '/^S/{print ">"$2;print $3}' "${2}${ACCESSION}.bp.p_ctg.gfa" > "${2}${ACCESSION}.fa"

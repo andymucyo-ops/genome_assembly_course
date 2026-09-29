@@ -10,12 +10,13 @@
 #SBATCH --output=/data/users/ankunzimana/genome_assembly_course/logs/out/Trinity_%j.o
 #SBATCH --error=/data/users/ankunzimana/genome_assembly_course/logs/err/Trinity_%j.e
 
-module add Trinity/2.15.1-foss-2021a
+#load Trinity 
+module load Trinity/2.15.1-foss-2021a
 
+#run Trinity
 Trinity --seqType fq\
-   --max_memory ${SLURM_MEM_PER_NODE}\
+   --max_memory 64G\
    --CPU ${SLURM_CPUS_PER_TASK}\
    --left ${1}\
    --right ${2}\
    --output ${3}
-

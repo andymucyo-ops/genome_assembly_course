@@ -17,4 +17,4 @@ CONTAINER='/containers/apptainer/flye_2.9.5.sif'
 apptainer exec --bind /data \
     ${CONTAINER} flye --pacbio-hifi ${1}\
     --out-dir ${2}\
-    -threads ${SLURM_CPUS_PER_TASK}
+    --threads ${SLURM_CPUS_PER_TASK}

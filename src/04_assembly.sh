@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #Input variables
-GENOME_INPUT='/data/users/ankunzimana/genome_assembly_course/raw_data/Ishikawa/ERR11437319.fastq.gz'
+GENOME_INPUT='./raw_data/Ishikawa/ERR11437319.fastq.gz'
 TRANSCRIPTOME_INPUT_1='./raw_data/trimmed/RNAseq/out_Read1.fq.gz'
 TRANSCRIPTOME_INPUT_2='./raw_data/trimmed/RNAseq/out_Read2.fq.gz'
 
@@ -17,7 +17,7 @@ HIFIASM_SCRIPT='./src/slurm_scripts/run_hifiasm.sh'
 LJA_SCRIPT='./src/slurm_scripts/run_LJA.sh'
 TRINITY_SCRIPT='./src/slurm_scripts/run_Trinity.sh'
 
-#make all scripts executalbe
+#make all scripts executable
 chmod +x ${FLYE_SCRIPT} ${HIFIASM_SCRIPT} ${LJA_SCRIPT} ${TRINITY_SCRIPT}
 
 #creating output dirs if it doesn't exist
