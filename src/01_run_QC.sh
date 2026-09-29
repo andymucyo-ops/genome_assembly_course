@@ -13,7 +13,7 @@ if [ ! -e ${OUTPUT_DIR_ACCESSION} ]; then mkdir -p ${OUTPUT_DIR_ACCESSION}; fi
 if [ ! -e ${OUTPUT_DIR_RNASEQ} ]; then mkdir -p ${OUTPUT_DIR_RNASEQ}; fi
 
 #make fastqc script executable
-chmod u+x ${FASTQC_SCRIPT}
+chmod +x ${FASTQC_SCRIPT}
 
 for file in `ls -1 ${INPUT_DIR_ACCESSION}`; do
     sbatch ${FASTQC_SCRIPT} "${INPUT_DIR_ACCESSION}/${file}" ${OUTPUT_DIR_ACCESSION}

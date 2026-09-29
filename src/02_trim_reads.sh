@@ -20,8 +20,8 @@ if [ ! -e ${TRIMMED_DIR_GENOME} ]; then mkdir -p ${TRIMMED_DIR_GENOME}; fi
 if [ ! -e ${TRIMMED_DIR_RNASEQ} ]; then mkdir -p ${TRIMMED_DIR_RNASEQ}; fi
 
 #make fastqc script executable
-chmod u+x ${FASTP_GENOME_SCRIPT}
-chmod u+x ${FASTP_RNASEQ_SCRIPT}
+chmod +x ${FASTP_GENOME_SCRIPT}
+chmod +x ${FASTP_RNASEQ_SCRIPT}
 
 #loop through fastq files from raw_data dir and run fastp according to read type
 for dir in `ls -1 ${INPUT_DIR}`; do
