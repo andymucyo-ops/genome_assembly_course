@@ -13,8 +13,8 @@
 #setting up all necessary paths
 # output dir is the 3rd argument passed by the script
 # output dir is the 4th argument passed by the script
-OUTFILE_READ_1="${4}/out_Read1.fq.gz" 
-OUTFILE_READ_2="${4}/out_Read2.fq.gz"
+OUTFILE_READ_1="${4}/Transcriptome_Read1.fq.gz" 
+OUTFILE_READ_2="${4}/Transcriptome_Read2.fq.gz"
 REPORT_HTML="${3}/fastp_rnaseq.html"
 REPORT_JSON="${3}/fastp_rnaseq.json"
 CONTAINER='/containers/apptainer/fastp_0.23.2--h5f740d0_3.sif'

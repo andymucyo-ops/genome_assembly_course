@@ -5,6 +5,8 @@
 raw_data/
 read_QC/
 assemblies/
+k-mer_counting/
+assembly_assessement/
 logs/
 out/
 err/
