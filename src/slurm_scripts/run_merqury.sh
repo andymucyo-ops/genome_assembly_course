@@ -24,7 +24,6 @@ declare -A ASSEMBLIES=(
   [flye]="${INPUT_DIR}flye/assembly.fasta"
   [hifiasm]="${INPUT_DIR}hifiasm/Ishikawa.fa"
   [lja]="${INPUT_DIR}LJA/assembly.fasta"
-  [trinity]="${INPUT_DIR}Trinity.Trinity.fasta"
 )
 
 
