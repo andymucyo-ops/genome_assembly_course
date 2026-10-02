@@ -4,6 +4,8 @@
 #directories to ignore
 raw_data/
 read_QC/
+busco_downloads/
+busco_217943.log
 assemblies/
 k-mer_counting/
 assembly_assessement/
