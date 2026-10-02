@@ -21,10 +21,10 @@ READS="./raw_data/Ishikawa/ERR11437319.fastq.gz"
 
 # Assemblies to evaluate
 declare -A ASSEMBLIES=(
-  [flye]="${INPUT_DIR}flye/assembly.fasta|genome"
-  [hifiasm]="${INPUT_DIR}hifiasm/Ishikawa.fa|genome"
-  [lja]="${INPUT_DIR}LJA/assembly.fasta|genome"
-  [trinity]="${INPUT_DIR}Trinity.Trinity.fasta|transcriptome"
+  [flye]="${INPUT_DIR}flye/assembly.fasta"
+  [hifiasm]="${INPUT_DIR}hifiasm/Ishikawa.fa"
+  [lja]="${INPUT_DIR}LJA/assembly.fasta"
+  [trinity]="${INPUT_DIR}Trinity.Trinity.fasta"
 )
 
 
