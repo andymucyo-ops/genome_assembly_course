@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-OUT_DIR_BUSCO='./assembly_assessement/busco/'
-OUT_DIR_QUAST='./assembly_assessement/quast/'
-OUT_DIR_MERQURY='./assembly_assessement/merqury/'
+PROJECT_DIR='/data/users/ankunzimana/genome_assembly_course'
+OUT_DIR_BUSCO="${PROJECT_DIR}/assembly_assessement/busco/"
+OUT_DIR_QUAST="${PROJECT_DIR}/assembly_assessement/quast/"
+OUT_DIR_MERQURY="${PROJECT_DIR}/assembly_assessement/merqury/"
 
 if [ ! -e ${OUT_DIR_BUSCO} ]; then mkdir -p ${OUT_DIR_BUSCO}; fi
 if [ ! -e ${OUT_DIR_QUAST} ]; then mkdir -p ${OUT_DIR_QUAST}; fi
@@ -26,5 +27,7 @@ scripts=(
     )
 
 for i in "${!scripts[@]}"; do
-    sbatch ${scripts[$i]} ${out_dirs[$i]}
+    script=${scripts[$i]}
+    out_ditr=${out_dirs[$i]}
+    sbatch ${script} ${out_dir}
 done
