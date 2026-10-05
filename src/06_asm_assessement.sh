@@ -28,6 +28,6 @@ scripts=(
 
 for i in "${!scripts[@]}"; do
     script=${scripts[$i]}
-    out_ditr=${out_dirs[$i]}
+    out_dir=${out_dirs[$i]}
     sbatch ${script} ${out_dir}
 done
